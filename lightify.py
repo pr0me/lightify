@@ -3,7 +3,7 @@
 # Copyright (c) 2014 Lukas Seidel
 # Version 0.1
 
-import sys
+import sys, os
 from gi.repository import Gtk
 from phue import Bridge
 
@@ -38,6 +38,7 @@ def calcColor(r, g, b):
     return colorsXY
 
 def getImage():
+    os.system("import -window root screen.png")
 
 
 def gammaCorrection(r, g, b):
