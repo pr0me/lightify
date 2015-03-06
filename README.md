@@ -7,7 +7,7 @@ An ambilight approach using Philips Hue Light System and written in Python.
 
 * Python 3.4
 * optimally Phillips Hue Lights with a connecting Bridge
-* dependencies: phue, os and sys std libs, Pillow Implementation of PIL for Py3.X
+* dependencies: phue, os and sys std libs, Pillow Implementation of PIL for Py3.X, ImageMagick
 
 ##Acknowledgements
 
