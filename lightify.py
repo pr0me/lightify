@@ -6,9 +6,10 @@
 import sys, os
 from PIL import Image
 from phue import Bridge
-import analysisC
+import pyximport; pyximport.install()
+import analysis as a
 
-IP = '192.168.178.31'
+IP = '192.168.178.45'
 
 b = Bridge(IP)
 
@@ -26,21 +27,18 @@ def connect():
 def main():
     connect()
     b.set_light(1, 'on', True)
+    lights = b.get_light_objects()
     lights[0].brightness = 200
     currColors = [0, 0]
 
     while True:
-        try:
-            os.system("import -window root screen.png")
-            avgColor = processImage()
-            lastColors = currColors
-            currColors = calcColor(avgColor[0], avgColor[1], avgColor[2])
-            if (currColors[0] > lastColors[0] + 0.01 or currColors[0] < lastColors[0] - 0.01 or
-                currColors[1] > lastColors[1] + 0.01 or currColors[1] < lastColors[1] - 0.01):
-               lights = b.get_light_objects()
+        os.system("import -window root screen.png")
+        avgColor = a.processImage()
+        lastColors = currColors
+        currColors = a.calcColor(avgColor[0], avgColor[1], avgColor[2])
+        if (currColors[0] > lastColors[0] + 0.01 or currColors[0] < lastColors[0] - 0.01 or
+            currColors[1] > lastColors[1] + 0.01 or currColors[1] < lastColors[1] - 0.01):
                lights[0].xy = [currColors[0],currColors[1]]
-        except:
-            lights = b.get_light_objects()
-            lights[0].brightness = 200
+        print("UPDATE")
 
 main()
