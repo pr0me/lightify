@@ -9,6 +9,7 @@ from phue import Bridge
 import pyximport; pyximport.install()
 import analysis as a
 
+# insert IP of your Hue bridge here
 IP = '192.168.178.45'
 
 b = Bridge(IP)
@@ -28,7 +29,7 @@ def main():
     connect()
     b.set_light(1, 'on', True)
     lights = b.get_light_objects()
-    lights[0].brightness = 200
+    lights[0].brightness = 220
     currColors = [0, 0]
 
     while True:
