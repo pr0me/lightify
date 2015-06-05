@@ -1,6 +1,5 @@
 #!/usr/bin/python3.4
 
-import timeit
 import sys, os
 from PIL import Image
 
@@ -41,6 +40,7 @@ def processImage():
             b += int(data[x][2])
 
         counter += 1
+
         x += (counter % 2) + 1
 
     # compute average RGB values
@@ -101,6 +101,3 @@ def main1():
     colors = calcColor(avgColor[0], avgColor[1], avgColor[2])
     # print(avgColor)
     # print(colors)
-
-# t = timeit.Timer(main1)
-# print(t.repeat(10, 1))
