@@ -4,7 +4,6 @@ import sys, os
 from PIL import Image
 
 def processImage():
-    # os.system("import -window root screen.png")
     img = Image.open("screen.png")
     width, height = img.size
 

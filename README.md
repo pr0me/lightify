@@ -11,7 +11,8 @@ An ambilight approach using Philips Hue Light System and written in Python.
     [Pillow Implementation of PIL](https://pypi.python.org/pypi/Pillow/2.8.1) for Py3.X
 
 ## Change Log
-* changed to pyximport method, Cython needed (trying to find a better way)
+* shipping with pre-built extension again, Cython is NOT required
+* changed to pyximport method, ~~Cython needed (trying to find a better way)~~
 * added pre-built c-/ cython-files, ~~user is not required to have Cython installed~~
 * analysis and calculation functions are now cythonized for a 200% speedup
 * split up lightify (main) and calculation parts

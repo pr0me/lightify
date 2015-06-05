@@ -7,7 +7,6 @@
 import sys, os
 from PIL import Image
 from phue import Bridge
-import pyximport; pyximport.install()
 import analysis as a
 
 # insert IP of your Hue bridge here
