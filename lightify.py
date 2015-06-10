@@ -46,4 +46,6 @@ def main():
 
 # t = timeit.Timer(main)
 # print(t.repeat(10, 1))
-main()
+
+if __name__ == "__main__":
+    main()
