@@ -1,6 +1,6 @@
 Ambient Lighting with Hue
 =========================
-Version 1.0
+Version 1.1
 
 An ambilight approach using Philips Hue Light System and written in Python.
 
@@ -9,7 +9,7 @@ The tool was developed and tested on linux distributions. It uses the os.system
 function to execute ImageMagick from the command line and thus depends on a
 similar setting.
 
-Use argument '-h' for further help, especially concerning screenshot source and 
+Use argument '-h' for further help, especially concerning screenshot source and
 frequency!
 
 ## Change Log
