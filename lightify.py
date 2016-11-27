@@ -1,7 +1,7 @@
 #!/usr/bin/python3.5
 
 # Copyright (c) 2014 Lukas Seidel
-# Version 0.1
+# Version 1.1
 
 # import timeit
 import os
